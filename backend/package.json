@@ -1,0 +1,39 @@
+{
+  "name": "k121",
+  "version": "1.0.0",
+  "description": "backend teste kenoby",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --compilers js:babel-core/register -r ./test/unit/db.test.js './src/**/*.spec.js*'"
+  },
+  "author": "Mateus Piló Dias",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "config": "^3.0.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.0.7",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-helmet": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.4.11"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^5.2.0",
+    "sandboxed-module": "^2.0.3",
+    "sinon": "^7.2.3"
+  },
+  "babel": {
+    "presets": ["latest"]
+  }
+}

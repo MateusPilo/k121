@@ -1,0 +1,58 @@
+<div class="container">
+    <ng-container mPortletHeadTitle>
+        <div class="row">
+            <div class="col-lg-12 fontTitleTQT">
+                <b>
+                    Lista de Amigos
+                </b>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- use ng-container[mPortletHeadTools] for the top right toolbar content -->
+    <ng-container mPortletHeadTools>
+
+        <button   matTooltip="Adicionar Novo Amigo" class="btn btn-primary spaceTop" (click)="newFriend()" >
+            <span class="glyphicon glyphicon-plus"></span>
+                Novo Amigo
+            
+        </button>
+        <span>&nbsp;</span>
+        
+        <button class="btn btn-default spaceTop" matTooltip="Sortear Amigos" (click)="drawFriends()" >
+                <span class="glyphicon glyphicon-equalizer"></span>
+                
+            Sortear Amigos
+        </button>
+    </ng-container>
+
+    <div class="mat-elevation-z8 spaceTop">
+        <mat-table #table [dataSource]="dataSource" matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="nome">
+                <mat-header-cell *matHeaderCellDef><b>Nome</b> </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.nome}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef><b>Email</b> </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef><b>Ação</b></mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <button  (click)="edit(row)" class="btn btn-warning size">
+                            <span class="glyphicon glyphicon-edit " ></span>
+                    </button>&nbsp;&nbsp;
+                    
+                    <button  (click)="remove(row)" class="btn btn-danger size">
+                            <span class="glyphicon glyphicon-trash"></span>
+                    </button>&nbsp;
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</div>

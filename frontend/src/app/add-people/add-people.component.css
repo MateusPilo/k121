@@ -1,0 +1,12 @@
+.size{
+    height: 48px !important;
+    position: relative;
+    top: -45px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+mat-form-field {
+    width: 100% !important;
+   
+}
