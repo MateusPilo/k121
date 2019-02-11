@@ -9,7 +9,7 @@ Teste de desenvolvimento de aplicativo de Amigo Secreto
 #### Backend
 
  * [Node.js](http://nodejs.org)
- * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/)
+ * [MongoDB mLab](https://mlab.com/)
  * [Mongoose](http://mongoosejs.com/)
  * [KOA](https://koajs.com/)
  * [Mocha.js](https://mochajs.org/)
