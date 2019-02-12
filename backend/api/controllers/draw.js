@@ -20,7 +20,7 @@ function mix(peoples) {
   return peoples;
 }
 
-export const toDraw = (peoples) => {
+const toDraw = (peoples) => {
   let result = {};
   try {
     const mixedPeoples = mix(peoples.dados);
@@ -39,3 +39,5 @@ export const toDraw = (peoples) => {
   }
   return result;
 };
+
+module.exports = toDraw;

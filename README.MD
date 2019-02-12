@@ -4,6 +4,12 @@ Teste de desenvolvimento de aplicativo de Amigo Secreto
 
 ---
 
+## Deploy
+
+* [Amigo Secreto](http://178.128.181.253/)
+
+---
+
 ### Tecnologias Utilizadas
 
 #### Backend
@@ -11,7 +17,7 @@ Teste de desenvolvimento de aplicativo de Amigo Secreto
  * [Node.js](http://nodejs.org)
  * [MongoDB mLab](https://mlab.com/)
  * [Mongoose](http://mongoosejs.com/)
- * [KOA](https://koajs.com/)
+ * [Koa.js](https://koajs.com/)
  * [Mocha.js](https://mochajs.org/)
  * [Chai.js](http://chaijs.com/)
  * [Sinon.js](http://sinonjs.org/)

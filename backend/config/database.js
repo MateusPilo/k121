@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
-import config from './constants';
+const mongoose = require('mongoose');
+const config = require('./constants');
 
 
-export default () => {
+module.exports = () => {
   mongoose.Promise = global.Promise;
 
   const connect = async () => new Promise(async (resolve, reject) => {

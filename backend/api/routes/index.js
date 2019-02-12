@@ -1,9 +1,9 @@
-import Router from 'koa-router';
-import people from './peopple';
-import draw from './draw';
+const Router = require('koa-router');
+const people = require('./peopple');
+const draw = require('./draw');
 
 
-export default () => {
+module.exports = () => {
   const myRouter = new Router();
   myRouter.use('/people', people());
   myRouter.use('/sortear', draw());

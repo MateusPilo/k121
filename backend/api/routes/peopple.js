@@ -1,9 +1,7 @@
-import Router from 'koa-router';
-import {
-  get, create, remove, update,
-} from '../controllers/people';
+const Router = require('koa-router');
+const controler = require('../controllers/people')();
 
-export default () => {
+module.exports = () => {
   const myRouter = new Router();
 
   /**
@@ -12,7 +10,7 @@ export default () => {
    */
   const getAll = async (ctx) => {
     try {
-      const res = await get(ctx.params);
+      const res = await controler.get(ctx.params);
       ctx.status = 200;
       ctx.body = res;
     } catch (error) {
@@ -28,7 +26,7 @@ export default () => {
    */
   const post = async (ctx) => {
     try {
-      const res = await create(ctx.request.body);
+      const res = await controler.create(ctx.request.body);
       ctx.status = 200;
       ctx.body = res;
     } catch (error) {
@@ -43,7 +41,7 @@ export default () => {
    */
   const put = async (ctx) => {
     try {
-      const res = await update(ctx.request.body);
+      const res = await controler.update(ctx.request.body);
       ctx.status = 200;
       ctx.body = res;
     } catch (error) {
@@ -59,7 +57,7 @@ export default () => {
    */
   const del = async (ctx) => {
     try {
-      const res = await remove(ctx.params);
+      const res = await controler.remove(ctx.params);
       ctx.status = 200;
       ctx.body = res;
     } catch (error) {

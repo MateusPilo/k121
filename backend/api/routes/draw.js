@@ -1,16 +1,16 @@
-import Router from 'koa-router';
-import { toDraw } from '../controllers/draw';
-import { get, putFriend } from '../controllers/people';
-import { emailSend } from '../utils/utils';
+const Router = require('koa-router');
+const toDraw = require('../controllers/draw');
+const PeopleController = require('../controllers/people')();
+const emailSend = require('../utils/utils');
 
-export default () => {
+module.exports = () => {
   const router = new Router();
 
   const draw = async (ctx) => {
     try {
-      const peoples = await get();
+      const peoples = await PeopleController.get();
       const mixedPeoples = toDraw(peoples);
-      await putFriend(mixedPeoples);
+      await PeopleController.putFriend(mixedPeoples);
       emailSend(mixedPeoples);
 
       ctx.status = 200;

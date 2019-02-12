@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 // eslint-disable-next-line prefer-destructuring
 const Schema = mongoose.Schema;
@@ -13,4 +13,4 @@ const model = new Schema({
   timestamps: { createdAt: 'createdAt' },
 });
 
-export default mongoose.model('People', model);
+module.exports = mongoose.model('People', model);

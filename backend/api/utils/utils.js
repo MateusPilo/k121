@@ -1,10 +1,10 @@
-import sendMail from '@sendgrid/mail';
-import config from '../../config/constants';
+const sendMail = require('@sendgrid/mail');
+const config = require('../../config/constants');
 
 sendMail.setApiKey(config.email.key);
 
-// eslint-disable-next-line import/prefer-default-export
-export const emailSend = async ({ peoples }) => {
+// eslint-disable-next-line const/prefer-default-export
+const emailSend = async ({ peoples }) => {
   let result = {};
   try {
     // eslint-disable-next-line array-callback-return
@@ -25,3 +25,5 @@ export const emailSend = async ({ peoples }) => {
 
   return result;
 };
+
+module.exports = emailSend;

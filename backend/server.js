@@ -1,15 +1,15 @@
 
-import Koa from 'koa';
-import Router from 'koa-router';
-import body from 'koa-body';
-import logger from 'koa-logger';
-import helmet from 'koa-helmet';
+const Koa = require('koa');
+const Router = require('koa-router');
+const body = require('koa-body');
+const logger = require('koa-logger');
+const helmet = require('koa-helmet');
 
 
-import * as http from 'http';
-import db from './config/database';
-import myRoutes from './api/routes';
-import * as config from './config/constants';
+const http = require('http');
+const db = require('./config/database');
+const myRoutes = require('./api/routes');
+const config = require('./config/constants');
 
 const app = new Koa();
 const myRouter = new Router();
@@ -48,4 +48,4 @@ app.use(myRouter.routes()).use(myRouter.allowedMethods());
 
 db().connect();
 
-export default app;
+module.exports = app;
