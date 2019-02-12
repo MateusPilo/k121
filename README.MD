@@ -30,10 +30,11 @@ Teste de desenvolvimento de aplicativo de Amigo Secreto
 
 ### O que precisa ?
 
-Node.js v8.11.2 +
-AngularCli Instalado globalmente
+    Node.js v8.11.2 +
+    
+    AngularCli Instalado globalmente
 
-npm i -g @angular/cli
+    npm i -g @angular/cli
 
 
 
