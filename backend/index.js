@@ -4,3 +4,16 @@ require('babel-register')({
 });
 require('babel-polyfill');
 require('./server');
+
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};
